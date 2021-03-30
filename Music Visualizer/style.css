@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  color: turquoise;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 50px;
+  font-family: Lato, sans-serif;
+}
+.audio-container {
+  display: flex;
+  margin-top: 20px;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.audio-container-new {
+  justify-content: center;
+}
+
+.audio-style {
+  width: 50%;
+  margin-right: 20px;
+}
+
+audio:focus {
+  outline: none;
+}
+
+#animate {
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  outline: none;
+  border-style: none;
+  color: white;
+  font-size: 16px;
+  background-color: #ba000d;
+}
+
+canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: 1px solid red; */
+}
+
+input[type="file"] {
+  height: 40px;
+  color: white;
+  margin-right: 5px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  outline: none;
+  border-style: none;
+  background-color: #002984;
+  color: white;
+  margin-right: 5px;
+}
