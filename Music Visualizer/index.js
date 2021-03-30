@@ -4,10 +4,15 @@ let fileInput = document.getElementById("fileInput");
 let songHeading = document.getElementById("song-heading");
 
 fileInput.addEventListener("change", () => {
-  if (fileInput.value) {
-    audio.src = fileInput.files[0].name;
-    songHeading.innerText = fileInput.files[0].name.split(".")[0];
-    audio.load();
+  if (fileInput.files && fileInput.files[0]) {
+    let reader = new FileReader();
+    reader.onload = function (e) {
+      audio.src = e.target.result;
+      audio.load();
+    };
+    reader.readAsDataURL(fileInput.files[0]);
+    let fileName = fileInput.files[0].name.slice(0, -4);
+    songHeading.innerText = fileName;
   }
 });
 
